@@ -5,9 +5,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install basics
 RUN apt-get update &&  \
-    apt-get install -y git wget unzip ruby ruby-dev build-essential xvfb
+    apt-get install -y git wget curl unzip ruby ruby-dev build-essential xvfb
 
-RUN wget https://deb.nodesource.com/setup_8.x | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
     apt-get update &&  \
     apt-get install -y nodejs
 
